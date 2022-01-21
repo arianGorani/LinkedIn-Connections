@@ -67,17 +67,16 @@ public class LinkedInPOM extends WebCommands {
                     clickThis(confirmSendButton);
                     count++;
                     System.out.println("Count " + count);
-                    if(isElementDisplayed(gotItButton)){
-                        sleep(1000);
-                        clickThis(gotItButton);
-                        System.out.println("You’ve reached the weekly invitation limit");
-                        Web.closePage();
-                    }else if(isElementDisplayed(dialogBox)){
-                        sleep(1000);
-                        Actions action = new Actions(Web.getDriver());
-                        moveMouseOverElement(closeButtonID);
-                        clickThis(closeButtonID);
-                    }
+                }else if(isElementDisplayed(dialogBox)){
+                    sleep(1000);
+                    Actions action = new Actions(Web.getDriver());
+                    moveMouseOverElement(closeButtonID);
+                    clickThis(closeButtonID);
+                }else if(isElementDisplayed(gotItButton)){
+                    sleep(1000);
+                    clickThis(gotItButton);
+                    System.out.println("You’ve reached the weekly invitation limit");
+                    Web.closePage();
                 }
 
             }
