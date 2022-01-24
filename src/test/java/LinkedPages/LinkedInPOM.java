@@ -19,8 +19,10 @@ public class LinkedInPOM extends WebCommands {
     By nextButton = By.xpath("//span[text()='Next']");
     By yourInvitationOnTheWay = By.xpath("//h2[@id='send-invite-modal']");
     By dialogBox = By.xpath("//div[@role='dialog']");
+    By toVerifyThisMember = By.xpath("//div[@role='dialog']//h2");
     By closeButtonID = By.xpath("//div[@role='dialog']//button[@data-test-modal-close-btn]//li-icon");
     By gotItButton = By.xpath("//span[text()='Got it']");
+
 
 
 
@@ -64,21 +66,22 @@ public class LinkedInPOM extends WebCommands {
             if (tab.getText().equalsIgnoreCase("Connect")) {
                 clickThis(tab);
                 if(isElementDisplayed(yourInvitationOnTheWay)){
-                    clickThis(confirmSendButton);
-                    count++;
-                    System.out.println("Count " + count);
-                }else if(isElementDisplayed(dialogBox)){
-                    sleep(1000);
-                    Actions action = new Actions(Web.getDriver());
-                    moveMouseOverElement(closeButtonID);
-                    clickThis(closeButtonID);
+                    String s1 = getElementText(yourInvitationOnTheWay);
+                    if(s1.equalsIgnoreCase("connect")){
+                        moveMouseOverElement(closeButtonID);
+                        clickThis(closeButtonID);
+                    }else {
+                        clickThis(confirmSendButton);
+                        count++;
+                        System.out.println("Count " + count);
+                    }
+
                 }else if(isElementDisplayed(gotItButton)){
                     sleep(1000);
                     clickThis(gotItButton);
                     System.out.println("You’ve reached the weekly invitation limit");
                     Web.closePage();
                 }
-
             }
         }
     }
