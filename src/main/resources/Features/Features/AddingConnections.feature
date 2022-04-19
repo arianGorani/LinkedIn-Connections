@@ -2,7 +2,7 @@
 Feature: Adding connections
 
   Scenario Outline: I am able to add connections
-    When I enter arian.gorani@gmail.com in email field and I enter konqar1989 in password field
+    When I enter yourEmail@address.com in email field and I enter yourPassword in password field
     When I search for <Title> on the homepage
     And I click on People option right under profile
     Then I press all connect buttons
@@ -11,6 +11,6 @@ Feature: Adding connections
     Examples:
       | Title |
       | qa engineer |
-      | it recruiter  |
+      | qa recruiter  |
 
 

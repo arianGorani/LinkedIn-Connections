@@ -44,7 +44,7 @@ public class LinkedInPOM extends WebCommands {
 
     public void searchFor(String nameToSearch) {
         clickThis(searchOnHomepage);
-        type(searchOnHomepage, nameToSearch + "\n");
+        type(searchOnHomepage, nameToSearch + Keys.ENTER);
         sleep(2000);
     }
 

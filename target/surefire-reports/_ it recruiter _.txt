@@ -1,0 +1,37 @@
+-------------------------------------------------------------------------------
+Test set: | it recruiter |
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.277 sec <<< FAILURE! - in | it recruiter |
+| it recruiter |  Time elapsed: 0 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=100.0.4896.88)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'ARIAN-GORANI', ip: '192.168.1.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b719ac445b099ff212125b5016156a94, findElement {using=xpath, value=//span[text()='Next']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.88, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\arian\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:14287}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:14287/devtoo..., se:cdpVersion: 100.0.4896.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b719ac445b099ff212125b5016156a94
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at Generic.WebCommands$1.apply(WebCommands.java:39)
+	at Generic.WebCommands$1.apply(WebCommands.java:37)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at Generic.WebCommands.getElement(WebCommands.java:37)
+	at Generic.WebCommands.clickThis(WebCommands.java:84)
+	at LinkedPages.LinkedInPOM.scrollToBottomOfPage(LinkedInPOM.java:93)
+	at LinkedInSD.LinkedInSD.pressConnectButtons(LinkedInSD.java:33)
+	at ?.Then I press all connect buttons(AddingConnections.feature:8)
+

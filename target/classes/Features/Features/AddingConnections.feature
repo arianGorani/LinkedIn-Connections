@@ -10,7 +10,7 @@ Feature: Adding connections
 
     Examples:
       | Title |
-      | qa engineer |
-      | it recruiter  |
+      #| qa engineer |
+      | qa recruiter  |
 
 

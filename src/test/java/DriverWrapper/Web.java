@@ -1,21 +1,33 @@
 package DriverWrapper;
 
-import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
-import java.net.MalformedURLException;
-import java.net.URL;
 
 public class Web {
     private static WebDriver driver = null;
 
+    //@Before
+    public void startBrowserFirefox() {
+        System.setProperty("webdriver.gecko.driver", "./drivers/GeckoDriver.exe");
+        driver = new FirefoxDriver();
+        driver.get("https://www.linkedin.com/home");
+        driver.manage().window().maximize();
+
+        
+//        DesiredCapabilities caps = DesiredCapabilities.firefox();
+//        caps.setCapability("platform","windows 10");
+//        caps.setCapability("version", "latest");
+//        driver = new FirefoxDriver(caps);
+
+    }
+
 
     @Before
-    public static void openLinkedIn() {
+    public static void startBrowserChrome() {
         System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.linkedin.com/home");

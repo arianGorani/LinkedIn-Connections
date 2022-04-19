@@ -83,13 +83,6 @@
             <version>1.2.6</version>
         </dependency>
 
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/io.cucumber/cucumber-java &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>io.cucumber</groupId>-->
-<!--            <artifactId>cucumber-java</artifactId>-->
-<!--            <version>7.2.3</version>-->
-<!--        </dependency>-->
-
 
         <dependency>
             <groupId>info.cukes</groupId>
@@ -98,13 +91,11 @@
         </dependency>
 
 
-
-
         <!-- https://mvnrepository.com/artifact/ru.yandex.qatools.allure/allure-cucumber-jvm-adaptor -->
         <dependency>
             <groupId>ru.yandex.qatools.allure</groupId>
             <artifactId>allure-cucumber-jvm-adaptor</artifactId>
-            <version>1.6.4</version>
+            <version>1.5.1</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver -->
